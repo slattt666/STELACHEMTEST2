@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ochrana osobných údajov – Stelachem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="lang.js"></script>
+</head>
+<body>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // set active nav link based on current path
+    (function() {
+        const links = document.querySelectorAll('.navbar nav a');
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === path || link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    })();
+    </script>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stelachem"></a>
+
+        <nav class="main-nav">
+            <a href="index.html" data-i18n="home">Domov</a>
+            <a href="onas.html" data-i18n="about">O nás</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakty</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19a8 8 0 1 1 5.293-14.293A8 8 0 0 1 11 19z" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="sk">SK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SEKCIA -->
+    <section class="hero hero--compact">
+        <div class="hero-content">
+            <h1>Ochrana osobných údajov a Cookies</h1>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- OBSAH -->
+    <section class="onas-bg">
+        <div class="onas-content">
+            <div class="onas-block">
+                <h3>I. Prevádzkovateľ</h3>
+                <p>
+                    1.1. Totožnosť Prevádzkovateľa: STELACHEM spol. s r. o., Karpatské námestie 10A, 831 06 Bratislava, IČO: 56627921.
+                </p>
+                <p>
+                    1.2. Emailový kontakt: stelachem@stelachem.sk | Tel.: 00421 903 481 012
+                </p>
+                <p>
+                    1.4. Prevádzkovateľ poskytuje tieto informácie v súlade s Nariadením (EÚ) 2016/679 (GDPR) a zákonom č. 18/2018 Z.z.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>II. Odkazy</h3>
+                <p>
+                    2.1. Tieto zásady tvoria súčasť Všeobecných obchodných podmienok zverejnených na Webovom sídle Predávajúceho.
+                </p>
+                <p>
+                    2.2. Prevádzkovateľ informuje, že neexistujú žiadne špeciálne príslušné kódexy správania, ku ktorým by sa zaviazal.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>III. Cookies, Scripts a Pixels</h3>
+                <p>
+                    3.1.1. Súbory cookies sú textové súbory obsahujúce malé množstvo informácií, ktoré sa pri návšteve webovej stránky stiahnu do vášho zariadenia. Vďaka tomu si webová lokalita uchováva informácie o vašich krokoch a preferenciách.
+                </p>
+                <p>
+                    Script je časť programového kódu, ktorý sa spustí na serveri prevádzkovateľa alebo na vašom zariadení.
+                </p>
+                <p>
+                    Pixels je malý, neviditeľný text alebo obrázok na webstránke používaný na monitorovanie návštevnosti.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>Typy cookies</h3>
+                <p>
+                    3.1.2. Technické alebo funkčné cookies – zabezpečujú správne fungovanie webového sídla. Tieto cookies sú používané bez súhlasu.
+                </p>
+                <p>
+                    Štatistické cookies – Prevádzkovateľ získava štatistiky ohľadom používania webových stránok. Tieto cookies sú používané len so súhlasom.
+                </p>
+                <p>
+                    Marketingové/Reklamné cookies – Používané na vytváranie reklamných profilov. Tieto cookies sú používané len so súhlasom.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>Kontrola cookies</h3>
+                <p>
+                    3.2.1. Súbory cookies môžete kontrolovať a zmazať podľa uváženia na stránke aboutcookies.org. Väčšinu prehliadačov môžete nastaviť tak, aby vám znemožnili ich ukladanie.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IV. Spracúvané osobné údaje</h3>
+                <p>
+                    4.1. Prevádzkovateľ spracúva nasledovné osobné údaje: meno, priezvisko, bydlisko, emailová adresa, telefónne čísla, fakturačná adresa, dodacia adresa, údaje zo súborov cookies, IP adresy.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>V. Zodpovedná osoba pre ochranu údajov</h3>
+                <p>
+                    5.1. Kontakt: Email: stelachem@stelachem.sk | Tel.: 00421 903 481 012
+                </p>
+                <p>
+                    5.2. Prevádzkovateľ je zároveň Predávajúcim v zmysle Všeobecných obchodných podmienok.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VI. Účely spracúvania</h3>
+                <p>
+                    6.1.1. Evidencia, tvorba a spracovanie zmlúv a údajov klientov za účelom uzatvárania zmlúv.
+                </p>
+                <p>
+                    6.1.2. Spracovanie účtovných dokladov a dokladov súvisiacich s obchodnou činnosťou.
+                </p>
+                <p>
+                    6.1.3. Dodržiavanie právnych predpisov v súvislosti s archiváciou dokumentov.
+                </p>
+                <p>
+                    6.1.4. Činnosť v súvislosti so splnením žiadosti, objednávky alebo zmluvy.
+                </p>
+                <p>
+                    6.1.5. Newsletter, marketingové a reklamné aktivity (len so súhlasom Dotknutej osoby).
+                </p>
+                <p>
+                    6.2. Osobné údaje sa uchovávajú iba po nevyhnutne nutnú dobu potrebnú na účely plnenia zmluvy, maximálne 10 rokov.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VII. Právny základ spracúvania</h3>
+                <p>
+                    7.1. Ak sa spracúvanie zakladá na súhlase, bude zahájené až po udelení daného súhlasu Dotknutou osobou.
+                </p>
+                <p>
+                    7.2. Pre plnenie kúpnej zmluvy a doručenie tovaru sa spracúvajú bez súhlasu dotknutej osoby.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VIII. Príjemcovia osobných údajov</h3>
+                <p>
+                    8.1.1. Štatutárne orgány alebo ich členovia Prevádzkovateľa.
+                </p>
+                <p>
+                    8.1.2. Osoby vykonávajúce pracovnú činnosť pre Prevádzkovateľa.
+                </p>
+                <p>
+                    8.1.3. Obchodní zástupcovia a ďalšie osoby spolupracujúce s Prevádzkovateľom.
+                </p>
+                <p>
+                    8.1.4. Spolupracovníci, obchodní partneri, dodávatelia (účtovné spoločnosti, IT služby, právne služby, prepravné spoločnosti, atď.).
+                </p>
+                <p>
+                    8.1.5. Súdy, orgány činné v trestnom konaní, daňový úrad a štátne orgány na základe zákona.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IX. Prenos do tretích krajín</h3>
+                <p>
+                    9.1. Neuplatňuje sa. Prevádzkovateľ neprenáša osobné údaje do tretích krajín.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>X. Práva Dotknutej osoby</h3>
+                <p>
+                    10.1.2. Právo na prístup k údajom – právo zistiť, či sa spracúvajú vaše údaje a v akom rozsahu.
+                </p>
+                <p>
+                    10.1.4. Právo na opravu nesprávnych alebo neúplných údajov.
+                </p>
+                <p>
+                    10.1.5. Právo na vymazanie (právo "na zabudnutie") bez zbytočného odkladu.
+                </p>
+                <p>
+                    10.1.11. Právo na obmedzenie spracúvania osobných údajov.
+                </p>
+                <p>
+                    10.1.16. Právo na prenosnosť údajov v štruktúrovanom, bežne používanom formáte.
+                </p>
+                <p>
+                    10.1.19. Právo namietať voči spracúvaniu osobných údajov.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XI. Odvolanie súhlasu</h3>
+                <p>
+                    11.1. Dotknutá osoba je kedykoľvek oprávnená odvolať svoj súhlas so spracovaním osobných údajov bez vplyvu na zákonnosť spracúvania pred jeho odvolaním. Odvolanie je možné v listinnej forme alebo elektronicky e-mailom.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XII. Právo na sťažnosť</h3>
+                <p>
+                    12.1. Dotknutá osoba má právo podať sťažnosť dozornému orgánu, ak sa domnieva, že spracúvanie jej údajov porušuje GDPR.
+                </p>
+                <p>
+                    12.2. Dozorný orgán v SR: Úrad na ochranu osobných údajov Slovenskej republiky, Budova Park one Námestie, 1.mája 7286/18, 811 06 Bratislava. Tel.: +421/2 3231 3214, Email: statny.dozor@pdp.gov.sk
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XIV. Záverečné ustanovenia</h3>
+                <p>
+                    14.1. Tieto Zásady tvoria neoddeliteľnú súčasť Všeobecných obchodných podmienok a Reklamačného poriadku.
+                </p>
+                <p>
+                    14.2. Tieto Zásady nadobúdajú platnosť dňa 08.07.2025.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>Informácie</h3>
+                <ul>
+                    <li><a href="vseob-podm.html">Všeobecné obchodné podmienky</a></li>
+                    <li><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov a Cookies</a></li>
+                    <li><a href="reklamacny-poriadok.html">Reklamačný poriadok</a></li>
+                    <li><a href="assets/2025-07-08-formular-na-odstupenie-od-zmluvy.pdf">Formulár na odstúpenie od zmluvy</a></li>
+                    <li><a href="assets/2025-07-08-reklamacny-formular.pdf">Reklamačný formulár</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3>Sme tu pre vás</h3>
+                <ul>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Podpora</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontaktujte nás</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="quickLinks">Rýchle odkazy</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="homeFooter">Domov</a></li>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontakty</a></li>
+                    <li><a href="#" data-i18n="discounts">Zľavy</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="contactInfo">Kontaktné informácie</h3>
+                <p class="footer-contact-company" data-i18n="companyName">STELACHEM spol. s r.o.</p>
+                <p data-i18n="companyAddress">Karpatská nám. 10A<br>831 06 Bratislava</p>
+                <p><a href="tel:+421903481012" data-i18n="phone">00421 903 481 012</a></p>
+                <p><a href="mailto:stelachem@stelachem.sk" data-i18n="email">stelachem@stelachem.sk</a></p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Stelachem.sk, Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+</body>
+</html>

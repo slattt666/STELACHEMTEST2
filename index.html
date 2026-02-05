@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stelachem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="lang.js"></script>
+</head>
+<body>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // set active nav link based on current path
+    (function() {
+        const links = document.querySelectorAll('.navbar nav a');
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === path || link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    })();
+</script>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stelachem"></a>
+        <nav class="main-nav">
+            <a href="index.html" data-i18n="home">Domov</a>
+            <a href="onas.html" data-i18n="about">O nás</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakty</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19a8 8 0 1 1 5.293-14.293A8 8 0 0 1 11 19z" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="sk">SK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SEKCIa -->
+    <section class="hero hero--compact">
+        <div class="hero-content">
+            <h1 data-i18n="heroTitle">CHEMICKÉ INOVÁCIE PRE VÁŠ POKROK</h1>
+            <p data-i18n="heroSubtitle">Moderné riešenia, certifikovaná kvalita a odborné poradenstvo pre váš priemysel.</p>
+        </div>
+
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- ČÍM SA VYZNAČUJEME -->
+    <section class="features-section">
+        <div class="features-container">
+            <!-- (Hexagon gallery removed as requested) -->
+
+            <!-- Alternating feature rows (hexagon + text) -->
+            <div class="onas-features">
+                <div class="onas-feature">
+                    <div class="onas-hexagon">
+                        <div class="hexagon-image">
+                            <img src="assets/images/chemlab1.avif" alt="Spoľahlivosť">
+                        </div>
+                    </div>
+                    <div class="onas-text">
+                        <h3 class="onas-feature-title" data-i18n="reliability">SPOĽAHLIVOSŤ</h3>
+                        <p data-i18n="reliabilityText">V dynamickom svete priemyslu a výskumu je spoľahlivosť kľúčová. Spolupracujeme s lídrami v distribúcii vysokokvalitných chemikálií pre priemyselné a laboratórne využitie.</p>
+                    </div>
+                </div>
+
+                <div class="onas-feature onas-feature--rev">
+                    <div class="onas-hexagon">
+                        <div class="hexagon-image">
+                            <img src="assets/images/chemlab2.avif" alt="Odborné poradenstvo">
+                        </div>
+                    </div>
+                    <div class="onas-text">
+                        <h3 class="onas-feature-title" data-i18n="expertise">ODBORNÉ PORADENSTVO A PODPORA</h3>
+                        <p data-i18n="expertiseText">Naším cieľom je nielen poskytovať chemikálie, ale aj ponúkať odborné poradenstvo. Náš tím odborníkov rozumie vašim potrebám a dodáva riešenia presne na mieru.</p>
+                    </div>
+                </div>
+
+                <div class="onas-feature">
+                    <div class="onas-hexagon">
+                        <div class="hexagon-image">
+                            <img src="assets/images/chemlab3.avif" alt="Široký sortiment">
+                        </div>
+                    </div>
+                    <div class="onas-text">
+                        <h3 class="onas-feature-title" data-i18n="products">ШИРОKÝ SORTIMENT PRODUKTOV</h3>
+                        <p data-i18n="productsText">Sme hrdí na широký sortiment produktov — od základných chemikálií po špecializované zlúčeniny a ekologicky šetrné riešenia. Zaručujeme kvalitu každej dodávky.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Ikonky s textom -->
+            <div class="icons-grid">
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-certifikovana-kvalita.png" alt="Certifikovaná kvalita">
+                    </div>
+                    <h4 data-i18n="certifiedQuality">Certifikovaná kvalita</h4>
+                    <p data-i18n="certifiedQualityText">Všetky produkty podliehajú prísnym kvalitativnym testom a sú certifikované podľa medzinárodných noriem.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-dlhorocne-skusenosti.png" alt="Dlhoročné skúsenosti">
+                    </div>
+                    <h4 data-i18n="experience">Dlhoročné skúsenosti</h4>
+                    <p data-i18n="experienceText">Viac ako 20 rokov praxe v chemickom priemysle. Trusted partner pre stovky firiem.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-flexibilita-objednavok.png" alt="Flexibilita objednávok">
+                    </div>
+                    <h4 data-i18n="flexibility">Flexibilita objednávok</h4>
+                    <p data-i18n="flexibilityText">Prispôsobujeme sa vašim potrebám. Možnosť individuálneho balenia a personalizácie.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-individualny-pristup.png" alt="Individuálny prístup">
+                    </div>
+                    <h4 data-i18n="individualApproach">Individuálny prístup</h4>
+                    <p data-i18n="individualApproachText">Každý klient je pre nás jedinečný. Personalizované konzultácie a podpora pri výbere produktov.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-odborne-poradenstvo.png" alt="Odborné poradenstvo">
+                    </div>
+                    <h4 data-i18n="expertAdvice">Odborné poradenstvo</h4>
+                    <p data-i18n="expertAdviceText">Náš tím chemikov a odborníkov je stále pripravený pomôcť s technickými otázkami a riešeniami.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-siroky-sortiment.png" alt="Široký sortiment">
+                    </div>
+                    <h4 data-i18n="wideRange">Široký sortiment</h4>
+                    <p data-i18n="wideRangeText">Rozsiahly výber chemických produktov a laboratorného vybavenia od svetových výrobcov.</p>
+                </div>
+
+                <div class="icon-card">
+                    <div class="icon-wrapper">
+                        <img src="assets/icons/icon-vyhradny-distributor.png" alt="Výhradný distribútor">
+                    </div>
+                    <h4 data-i18n="exclusiveDistributor">Výhradný distribútor</h4>
+                    <p data-i18n="exclusiveDistributorText">Oficiálny partner viacerých prémiumových značiek v sektore chemických produktov.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3 data-i18n="information">Informácie</h3>
+                <ul>
+                    <li><a href="vseob-podm.html" data-i18n="termsConditions">Všeobecné obchodné podmienky</a></li>
+                    <li><a href="ochrana-osobnych-udajov.html" data-i18n="privacyCookies">Ochrana osobných údajov a Cookies</a></li>
+                    <li><a href="reklamacny-poriadok.html" data-i18n="complaintsProcedure">Reklamačný poriadok</a></li>
+                    <li><a href="assets/2025-07-08-formular-na-odstupenie-od-zmluvy.pdf" data-i18n="withdrawalForm">Formulár na odstúpenie od zmluvy</a></li>
+                    <li><a href="assets/2025-07-08-reklamacny-formular.pdf" data-i18n="complaintForm">Reklamačný formulár</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="quickLinks">Rýchle odkazy</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="homeFooter">Domov</a></li>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontakty</a></li>
+                
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="contactInfo">Kontaktné informácie</h3>
+                <p class="footer-contact-company" data-i18n="companyName">STELACHEM spol. s r.o.</p>
+                <p data-i18n="companyAddress">Karpatská nám. 10A<br>831 06 Bratislava</p>
+                <p><a href="tel:+421903481012" data-i18n="phone">00421 903 481 012</a></p>
+                <p><a href="mailto:stelachem@stelachem.sk" data-i18n="email">stelachem@stelachem.sk</a></p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Stelachem.sk, Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+    
+    <script>
+    // Reveal on scroll: add .reveal when element intersects viewport
+    (function(){
+        const els = document.querySelectorAll('.onas-feature, .icon-card, .hero-content, .onas-hexagon .hexagon-image');
+        if(!('IntersectionObserver' in window)){
+            // fallback: reveal all
+            els.forEach(e=> e.classList.add('reveal'));
+            return;
+        }
+        const obs = new IntersectionObserver((entries, o)=>{
+            entries.forEach(entry=>{
+                if(entry.isIntersecting){
+                    entry.target.classList.add('reveal');
+                    o.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.12});
+        els.forEach(el=> obs.observe(el));
+    })();
+    </script>
+</body>
+</html>

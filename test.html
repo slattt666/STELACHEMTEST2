@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Lang Switch</title>
+    <script src="lang.js"></script>
+</head>
+<body>
+    <h1 data-i18n="heroTitle">Test</h1>
+    <p data-i18n="heroSubtitle">Test</p>
+    <button class="lang-btn active" data-lang="sk">SK</button>
+    <button class="lang-btn" data-lang="en">EN</button>
+    
+    <script>
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentLang = getCurrentLanguage();
+            updatePageLanguage(currentLang);
+            updateLanguageButtons(currentLang);
+
+            // Add click handlers to language buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    const lang = e.target.getAttribute('data-lang');
+                    setLanguage(lang);
+                });
+            });
+        });
+        
+        // Log to console
+        console.log('translations loaded:', Object.keys(translations.sk).length, 'Slovak keys');
+        console.log('translations loaded:', Object.keys(translations.en).length, 'English keys');
+    </script>
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reklamačný poriadok – Stelachem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="lang.js"></script>
+</head>
+<body>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // set active nav link based on current path
+    (function() {
+        const links = document.querySelectorAll('.navbar nav a');
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === path || link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    })();
+    </script>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stelachem"></a>
+
+        <nav class="main-nav">
+            <a href="index.html" data-i18n="home">Domov</a>
+            <a href="onas.html" data-i18n="about">O nás</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakty</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19a8 8 0 1 1 5.293-14.293A8 8 0 0 1 11 19z" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="sk">SK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SEKCIA -->
+    <section class="hero hero--compact">
+        <div class="hero-content">
+            <h1>Reklamačný poriadok</h1>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- OBSAH -->
+    <section class="onas-bg">
+        <div class="onas-content">
+            <div class="onas-block">
+                <h3>I. Identifikácia obchodníka</h3>
+                <p>
+                    1.1. Týmto Reklamačným poriadkom sa riadia právne vzťahy medzi STELACHEM spol. s r. o., zapísaná v Obchodnom registri Mestského súdu Bratislava III, oddiel: Sro, vložka č. 183089/B, IČO: 56627921 (ďalej "Predávajúci") a Kupujúcim.
+                </p>
+                <p>
+                    1.2. Email: stelachem@stelachem.sk | Tel. č.: 00421 903 481 012
+                </p>
+                <p>
+                    1.3. Adresa k zasielaniu reklamácií: STELACHEM, spol. s r. o., P.O.BOX 98, Glejovka 18, 902 03 Pezinok, Slovenská republika.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>II. Základné ustanovenia</h3>
+                <p>
+                    2.1. Týmto reklamačným poriadkom sa upravujú právne vzťahy medzi Kupujúcimi, ktorí sú spotrebiteľmi a Obchodníkom.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>III. Uplatnenie práva zo zodpovednosti za vady</h3>
+                <p>
+                    3.1. Kupujúci môže uplatňovať práva zo zodpovednosti za vady len ak vadu vytkol bez zbytočného odkladu, najneskôr do 24 mesiacov od prevzatia veci. Po uplynutí tejto lehoty práva zaniknú.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IV. Zodpovednosť za vady</h3>
+                <p>
+                    4.1. Predávajúci zodpovedá za akúkoľvek vadu, ktorú má predaná vec v čase jej dodania a ktorá sa prejaví do dvoch rokov od dodania veci.
+                </p>
+                <p>
+                    4.2. Pre veci s digitálnymi prvkami zodpovedá za každú vadu digitálneho obsahu alebo služby počas celej dohodnutej doby, najmenej však 2 roky.
+                </p>
+                <p>
+                    4.3. Pri použitej veci sa strany môžu dohodnúť na kratšej dobe zodpovednosti, nie však kratšej ako jeden rok.
+                </p>
+                <p>
+                    4.4. Pre kupujúcich, ktorí nie sú spotrebiteľmi, zodpovedá predávajúci za vady do 6 mesiacov od dodania.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>V. Práva zo zodpovednosti za vady</h3>
+                <p>
+                    5.1. Kupujúci má právo na: odstránenie vady opravou alebo výmenou, primeranú zľavu z kúpnej ceny alebo odstúpenie od kúpnej zmluvy.
+                </p>
+                <p>
+                    5.2. Kupujúci môže odoprieť zaplatiť kúpnu cenu pokiaľ si predávajúci nesplní povinnosti zo zodpovednosti za vady.
+                </p>
+                <p>
+                    5.3. Práva môže uplatňovať do dvoch mesiacov od zistenia vady, najneskôr do uplynutia lehoty podľa bodu IV.
+                </p>
+                <p>
+                    5.4. Uplatnenie práv nevylučuje právo na náhradu škody.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VI. Vytknutie vady</h3>
+                <p>
+                    6.1. Vadu možno vytknúť v prevádzkarni predávajúceho, u oprávnenej osoby alebo prostriedkami diaľkovej komunikácie na adrese sídla predávajúceho.
+                </p>
+                <p>
+                    6.2. Predávajúci poskytne písomné potvrdenie o vytknutí vady bezodkladne. V potvrdení uvedie lehotu na odstránenie vády, maximálne 30 dní.
+                </p>
+                <p>
+                    6.3. Ak predávajúci odmietne zodpovednosť, oznámi dôvody písomne. Kupujúci môže znaleckým posudkom preukázať zodpovednosť.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VII. Odstránenie vady</h3>
+                <p>
+                    7.1. Kupujúci si môže zvoliť odstránenie výmenou alebo opravou, pokiaľ je možné a nie je neprimerané drahé.
+                </p>
+                <p>
+                    7.2. Predávajúci môže odmietnuť odstránenie len ak nie je možné alebo by si vyžadovalo neprimerané náklady.
+                </p>
+                <p>
+                    7.3. Predávajúci vykona opravu alebo výmenu bezplatne, bez spôsobenia závažných ťažkostí kupujúcemu.
+                </p>
+                <p>
+                    7.4 až 7.16. Detailné podmienky prevzatia veci, dodania opravene/náhradnej veci, nákladov a vrátenia peňazí.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VIII. Zodpovednosť za vady digitálneho plnenia</h3>
+                <p>
+                    8.1. Obchodník zodpovedá za vady digitálneho plnenia v čase dodania, ktoré sa prejavia do 2 rokov.
+                </p>
+                <p>
+                    8.2. Obchodník odstráni vadu bezplatne, bez závažných ťažkostí spotrebiteľovi.
+                </p>
+                <p>
+                    8.3. Môže odmietnuť odstránenie len ak nie je možné alebo by bolo neprimerane drahé.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IX. Zodpovednosť za vady služby</h3>
+                <p>
+                    9.1. Zhotoviteľ zodpovedá za vady, ktoré má vec pri jej prevzatí objednávateľom.
+                </p>
+                <p>
+                    9.2. Ak sa vada prejaví do 24 mesiacov od prevzatia, predpokladá sa, že ju mala vec už v čase prevzatia.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>X. Záverečné ustanovenia</h3>
+                <p>
+                    10.1. Tento Reklamačný poriadok tvorí neoddeliteľnú súčasť Všeobecných obchodných podmienok a Zásad ochrany osobných údajov.
+                </p>
+                <p>
+                    10.2. Reklamačný poriadok je platný a účinný dňa 08.07.2025.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>Informácie</h3>
+                <ul>
+                    <li><a href="vseob-podm.html">Všeobecné obchodné podmienky</a></li>
+                    <li><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov a Cookies</a></li>
+                    <li><a href="reklamacny-poriadok.html">Reklamačný poriadok</a></li>
+                    <li><a href="assets/2025-07-08-formular-na-odstupenie-od-zmluvy.pdf">Formulár na odstúpenie od zmluvy</a></li>
+                    <li><a href="assets/2025-07-08-reklamacny-formular.pdf">Reklamačný formulár</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3>Sme tu pre vás</h3>
+                <ul>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Podpora</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontaktujte nás</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="quickLinks">Rýchle odkazy</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="homeFooter">Domov</a></li>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontakty</a></li>
+                    <li><a href="#" data-i18n="discounts">Zľavy</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="contactInfo">Kontaktné informácie</h3>
+                <p class="footer-contact-company" data-i18n="companyName">STELACHEM spol. s r.o.</p>
+                <p data-i18n="companyAddress">Karpatská nám. 10A<br>831 06 Bratislava</p>
+                <p><a href="tel:+421903481012" data-i18n="phone">00421 903 481 012</a></p>
+                <p><a href="mailto:stelachem@stelachem.sk" data-i18n="email">stelachem@stelachem.sk</a></p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Stelachem.sk, Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakty – Stelachem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="lang.js"></script>
+</head>
+<body>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // set active nav link based on current path
+    (function() {
+        const links = document.querySelectorAll('.navbar nav a');
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === path || link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    })();
+</script>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stelachem"></a>
+
+        <nav class="main-nav">
+            <a href="index.html" data-i18n="home">Domov</a>
+            <a href="onas.html" data-i18n="about">O nás</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakty</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19a8 8 0 1 1 5.293-14.293A8 8 0 0 1 11 19z" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="sk">SK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero sekcia – rovnaké pozadie ako O nás / Domov -->
+    <section class="hero hero--compact">
+        <div class="hero-content">
+            <h1 data-i18n="contactPageTitle">KONTAKTY</h1>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- Obsah – sekcie s priesvitnými boxami -->
+    <section class="onas-bg">
+        <div class="kontakt-content">
+            <section class="kontakt-section">
+                <h3 class="kontakt-section-title" data-i18n="managementTitle">Vedenie spoločnosti</h3>
+                <div class="onas-block contact-card" style="color: #000000 !important;">
+                    <p class="contact-name" style="color: #000000 !important;">Silvia Semešová</p>
+                    <p class="contact-role" style="color: #000000 !important;" data-i18n="roleManagementBoard">konateľka; úhrady</p>
+                    <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:silvia.semesova@stelachem.sk">silvia.semesova@stelachem.sk</a></p>
+                    <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905635" style="color: #000000 !important;">033/690 56 35</a>, <a href="tel:+421911481020" style="color: #000000 !important;">0911 481 020</a></p>
+                </div>
+            </section>
+
+            <section class="kontakt-section">
+                <h3 class="kontakt-section-title" data-i18n="receptionTitle">Recepcia</h3>
+                <div class="onas-block contact-card" style="color: #000000 !important;">
+                    <p class="contact-name" style="color: #000000 !important;">Ľubica Kopálová</p>
+                    <p class="contact-role" style="color: #000000 !important;" data-i18n="roleReception">recepcia</p>
+                    <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:lubica.kopalova@stelachem.sk">lubica.kopalova@stelachem.sk</a></p>
+                    <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905611" style="color: #000000 !important;">033/690 56 11</a></p>
+                </div>
+            </section>
+
+            <section class="kontakt-section">
+                <h3 class="kontakt-section-title" data-i18n="salesTitle">Obchodné oddelenie</h3>
+                <div class="contact-grid contact-grid--3">
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Mgr. Marián Madurkay</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleSalesDirector">obchodný riaditeľ</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:marian.madurkay@stelachem.sk">marian.madurkay@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421911982031" style="color: #000000 !important;">0911 982 031</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Mgr. Adriána Moravcová</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleProductManager">produktový manažér</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:adriana.moravcova@stelachem.sk">adriana.moravcova@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905625" style="color: #000000 !important;">033/690 56 25</a>, <a href="tel:+421911981023" style="color: #000000 !important;">0911 981 023</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Ing. Milan Hušták</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleSalesRep">obchodný zástupca – stredné Slovensko</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:milan.hustak@stelachem.sk">milan.hustak@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421903481027" style="color: #000000 !important;">0903 481 027</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Ľubica Švrčičová</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleOrdersLogisticsHead">objednávky, vedúca logistiky</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:lubica.svrcicova@stelachem.sk">lubica.svrcicova@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905619" style="color: #000000 !important;">033/690 56 19</a>, <a href="tel:+421911986034" style="color: #000000 !important;">0911 986 034</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Ing. Mária Herdová</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleOrdersLogistics">objednávky, logistika</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:maria.herdova@stelachem.sk">maria.herdova@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905624" style="color: #000000 !important;">033/690 56 24</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Monika Zápražná</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleOrdersLogistics">objednávky, logistika</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:monika.zaprazna@stelachem.sk">monika.zaprazna@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905616" style="color: #000000 !important;">033/690 56 16</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Slávka Šplháčková</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleOrdersLogistics">objednávky, logistika</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:slavka.splhackova@stelachem.sk">slavka.splhackova@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421336905617" style="color: #000000 !important;">033/690 56 17</a></p>
+                    </div>
+                    <div class="onas-block contact-card" style="color: #000000 !important;">
+                        <p class="contact-name" style="color: #000000 !important;">Ing. Veronika Del Rio</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleProcurement">nákupca</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:veronika.delrio@stelachem.sk">veronika.delrio@stelachem.sk</a></p>
+                    </div>
+                    <div class="onas-block contact-card">
+                        <p class="contact-name" style="color: #000000 !important;">Sabina Semešová</p>
+                        <p class="contact-role" style="color: #000000 !important;" data-i18n="roleProcurement">nákupca</p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">✉</span> <a href="mailto:sabina.semesova@stelachem.sk">sabina.semesova@stelachem.sk</a></p>
+                        <p class="contact-line"><span class="contact-icon" aria-hidden="true">☎</span> <a href="tel:+421911897337" style="color: #000000 !important;">+421 911 897 337</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3 data-i18n="information">Informácie</h3>
+                <ul>
+                    <li><a href="vseob-podm.html" data-i18n="termsConditions">Všeobecné obchodné podmienky</a></li>
+                    <li><a href="ochrana-osobnych-udajov.html" data-i18n="privacyCookies">Ochrana osobných údajov a Cookies</a></li>
+                    <li><a href="reklamacny-poriadok.html" data-i18n="complaintsProcedure">Reklamačný poriadok</a></li>
+                    <li><a href="assets/2025-07-08-formular-na-odstupenie-od-zmluvy.pdf" data-i18n="withdrawalForm">Formulár na odstúpenie od zmluvy</a></li>
+                    <li><a href="assets/2025-07-08-reklamacny-formular.pdf" data-i18n="complaintForm">Reklamačný formulár</a></li>
+                </ul>
+            </section>
+
+            
+
+            <section class="footer-section">
+                <h3 data-i18n="quickLinks">Rýchle odkazy</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="homeFooter">Domov</a></li>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontakty</a></li>
+                    
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="contactInfo">Kontaktné informácie</h3>
+                <p class="footer-contact-company" data-i18n="companyName">STELACHEM spol. s r.o.</p>
+                <p data-i18n="companyAddress">Karpatská nám. 10A<br>831 06 Bratislava</p>
+                <p><a href="tel:+421903481012" data-i18n="phone">00421 903 481 012</a></p>
+                <p><a href="mailto:stelachem@stelachem.sk" data-i18n="email">stelachem@stelachem.sk</a></p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Stelachem.sk, Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+</body>
+</html>

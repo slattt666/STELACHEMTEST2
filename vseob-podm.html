@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Všeobecné obchodné podmienky – Stelachem</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <script src="lang.js"></script>
+</head>
+<body>
+    <script>
+    window.addEventListener("scroll", function() {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+            navbar.classList.add("scrolled");
+        } else {
+            navbar.classList.remove("scrolled");
+        }
+    });
+
+    // set active nav link based on current path
+    (function() {
+        const links = document.querySelectorAll('.navbar nav a');
+        const path = window.location.pathname.split('/').pop() || 'index.html';
+        links.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === path || link.href === window.location.href) {
+                link.classList.add('active');
+            }
+        });
+    })();
+    </script>
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <a href="index.html" class="logo"><img src="assets/images/logo.png" alt="Stelachem"></a>
+
+        <nav class="main-nav">
+            <a href="index.html" data-i18n="home">Domov</a>
+            <a href="onas.html" data-i18n="about">O nás</a>
+            <a href="kontakt.html" data-i18n="contact">Kontakty</a>
+        </nav>
+
+        <div class="nav-right">
+            <button class="icon-btn" aria-label="Search">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11 19a8 8 0 1 1 5.293-14.293A8 8 0 0 1 11 19z" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M21 21l-4.35-4.35" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <button class="icon-btn" aria-label="Account">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                    <circle cx="12" cy="7" r="4" stroke="#222" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </button>
+            <div class="lang-switcher">
+                <button class="lang-btn active" data-lang="sk">SK</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SEKCIA -->
+    <section class="hero hero--compact">
+        <div class="hero-content">
+            <h1>Všeobecné obchodné podmienky</h1>
+        </div>
+        <div class="hero-bg"></div>
+    </section>
+
+    <!-- OBSAH -->
+    <section class="onas-bg">
+        <div class="onas-content">
+            <div class="onas-block">
+                <h3>I. Identifikácia obchodníka</h3>
+                <p>
+                    1.1. Týmito Všeobecnými obchodnými podmienkami (ďalej aj „VOP") sa riadia právne vzťahy medzi spoločnosťou STELACHEM spol. s r. o., zapísaná v Obchodnom registri Mestského súdu Bratislava III, oddiel: Sro, vložka č. 183089/B, IČO: 56627921 (ďalej aj "Predávajúci" alebo "Obchodník") a každou osobou, ktorá je Kupujúcim produktov ponúkaných Predávajúcim na Webovom sídle Predávajúceho, v rámci platnej legislatívy Slovenskej republiky.
+                </p>
+                <p>
+                    1.2. Email: stelachem@stelachem.sk | Tel. č.: 00421 903 481 012
+                </p>
+                <p>
+                    1.3. Adresa k zasielaniu písomností: STELACHEM, spol. s r. o., P.O.BOX 98, Glejovka 18, 902 03 Pezinok, Slovenská republika.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>II. Definícia pojmov</h3>
+                <p>
+                    2.1. Zmluvou uzavretou na diaľku je zmluva medzi obchodníkom a spotrebiteľom dohodnutá a uzavretá výlučne prostredníctvom jedného alebo viacerých prostriedkov diaľkovej komunikácie bez súčasnej fyzickej prítomnosti obchodníka a spotrebiteľa.
+                </p>
+                <p>
+                    2.2. Obchodník je osoba, ktorá v súvislosti so spotrebiteľskou zmluvou koná v rámci svojej podnikateľskej činnosti alebo povolania.
+                </p>
+                <p>
+                    2.3. Spotrebiteľom je fyzická osoba, ktorá v súvislosti so spotrebiteľskou zmluvou nekoná v rámci svojej podnikateľskej činnosti alebo povolania.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>III. Základné ustanovenia</h3>
+                <p>
+                    3.1. Týmito Všeobecnými obchodnými podmienkami sa upravujú právne vzťahy medzi Kupujúcimi, ktorí sú spotrebiteľmi a Obchodníkom.
+                </p>
+                <p>
+                    3.2. Na zmluvné vzťahy s Kupujúcimi, ktorí nevystupujú v postavení spotrebiteľa sa vzťahujú ustanovenia Obchodného zákonníka v platnom znení.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IV. Objednávka produktu – uzatvorenie kúpnej zmluvy</h3>
+                <p>
+                    4.1. Návrhom na uzatvorenie kúpnej zmluvy je odoslanie objednávky produktov Kupujúcim realizované na webovom sídle Obchodníka.
+                </p>
+                <p>
+                    4.2. K uzavretiu kúpnej zmluvy dochádza momentom doručenia potvrdenia o prijatí objednávky Kupujúcemu.
+                </p>
+                <p>
+                    4.3. Pri registrácii a objednávaní tovaru je kupujúci povinný uvádzať správne a pravdivo všetky údaje. Prístup k účtu je zabezpečený užívateľským menom a heslom, ktoré musí kupujúci zachovávať mlčanlivosti.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>V. Doba trvania kúpnej zmluvy</h3>
+                <p>
+                    5.1. Kúpna zmluva sa uzatvára na dobu určitú a zaniká splnením všetkých záväzkov Predávajúceho a Kupujúceho.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VI. Kúpna cena</h3>
+                <p>
+                    6.1. Cena tovarov objednávaných prostredníctvom Webového sídla Predávajúceho je uvedená samostatne pre každý produkt a je platná v momente vytvorenia objednávky.
+                </p>
+                <p>
+                    6.2. Kúpna cena je celková cena tovaru vrátane všetkých daní a je zreteľne uvedená na Webovom sídle Predávajúceho.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VII. Dodanie produktov</h3>
+                <p>
+                    7.1. V prípade platby dobierkou je Predávajúci povinný dodať produkty v lehote najneskôr do 30 dní odo dňa uzatvorenia kúpnej zmluvy.
+                </p>
+                <p>
+                    7.1.1. V prípade iných foriem platby je Predávajúci povinný dodať produkty v lehote najneskôr 30 dní odo dňa uzatvorenia zmluvy a zaplatenia celkovej ceny objednávky.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>VIII. Prechod vlastníckeho práva</h3>
+                <p>
+                    8.1. Vlastnícke právo k predanej veci prechádza na Kupujúceho okamihom dodania.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>IX. Spôsoby platby</h3>
+                <p>
+                    9.1. Za tovar na Webovom sídle Predávajúceho môžete platiť: platbou formou dobierky, platbou pri osobnom prevzatí na predajni, platbou vkladom alebo prevodom na účet Predávajúceho.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>X. Prepravné</h3>
+                <p>
+                    10.1. V kúpnej cene nie sú zahrnuté dopravné náklady.
+                </p>
+                <p>
+                    10.2. Spôsoby dopravy: osobný odber (0 EUR) alebo kuriérska spoločnosť (cena podľa aktuálneho cenníka).
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XI. Odstúpenie od zmluvy</h3>
+                <p>
+                    11.1. Spotrebiteľ má právo odstúpiť od zmluvy uzavretej na diaľku bez uvedenia dôvodu v lehote podľa ďalších bodov, okrem zmlúv špecifikovaných v tejto sekcii.
+                </p>
+                <p>
+                    11.2 až 11.13. Zákonné výnimky, keď sa právo na odstúpenie nevzťahuje (napr. tovary na mieru, alkoholické nápoje, digitálny obsah, atď.).
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XII. Lehota na odstúpenie</h3>
+                <p>
+                    12.1. Spotrebiteľ môže odstúpiť do 14 dní odo dňa prevzatia tovaru alebo uzavretia zmluvy o poskytnutí služby.
+                </p>
+                <p>
+                    12.2 až 12.9. Detailné podmienky uplatnenia práva na odstúpenie vrátane oznámenia, vrátenia tovaru a návratnosti platieb.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XIII. Práva a povinnosti po odstúpení</h3>
+                <p>
+                    13.1 až 13.5. Povinnosti kupujúceho vrátiť tovar, náklady spojené s vrátením a práva na vrátenie platieb.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XIV. Práva obchodníka po odstúpení</h3>
+                <p>
+                    14.1 až 14.7. Práva a povinnosti obchodníka pri vrátení peňazí a vyzdvihnutí tovaru.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XV. Orgán dozoru</h3>
+                <p>
+                    15.1. Príslušný orgán: Inšpektorát SOI pre Bratislavský kraj, Bajkalská 21/A, P. O. BOX č. 5, 820 07 Bratislava.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XVI. Alternatívne riešenie sporov</h3>
+                <p>
+                    16.1. Ak spotrebiteľ nie je spokojný, má právo obrátiť sa na Slovenskú obchodnú inšpekciu na alternatívne riešenie spotrebiteľských sporov podľa zákona č. 391/2015 Z.z.
+                </p>
+            </div>
+
+            <div class="onas-block">
+                <h3>XVII. Záverečné ustanovenia</h3>
+                <p>
+                    19.1. Predávajúci si vyhradzuje právo na zmenu Všeobecných obchodných podmienok. Zmena sa zverejňuje na Webovom sídle Predávajúceho.
+                </p>
+                <p>
+                    19.3. Tieto Všeobecné obchodné podmienky nadobúdajú platnosť dňa 08.07.2025.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-content">
+            <section class="footer-section">
+                <h3>Informácie</h3>
+                <ul>
+                    <li><a href="vseob-podm.html">Všeobecné obchodné podmienky</a></li>
+                    <li><a href="ochrana-osobnych-udajov.html">Ochrana osobných údajov a Cookies</a></li>
+                    <li><a href="reklamacny-poriadok.html">Reklamačný poriadok</a></li>
+                    <li><a href="assets/2025-07-08-formular-na-odstupenie-od-zmluvy.pdf">Formulár na odstúpenie od zmluvy</a></li>
+                    <li><a href="assets/2025-07-08-reklamacny-formular.pdf">Reklamačný formulár</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3>Sme tu pre vás</h3>
+                <ul>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Podpora</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontaktujte nás</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="quickLinks">Rýchle odkazy</h3>
+                <ul>
+                    <li><a href="index.html" data-i18n="homeFooter">Domov</a></li>
+                    <li><a href="onas.html" data-i18n="aboutFooter">O nás</a></li>
+                    <li><a href="kontakt.html" data-i18n="contactFooter">Kontakty</a></li>
+                    <li><a href="#" data-i18n="discounts">Zľavy</a></li>
+                </ul>
+            </section>
+
+            <section class="footer-section">
+                <h3 data-i18n="contactInfo">Kontaktné informácie</h3>
+                <p class="footer-contact-company" data-i18n="companyName">STELACHEM spol. s r.o.</p>
+                <p data-i18n="companyAddress">Karpatská nám. 10A<br>831 06 Bratislava</p>
+                <p><a href="tel:+421903481012" data-i18n="phone">00421 903 481 012</a></p>
+                <p><a href="mailto:stelachem@stelachem.sk" data-i18n="email">stelachem@stelachem.sk</a></p>
+            </section>
+        </div>
+        <div class="footer-bottom">
+            <p data-i18n="copyright">&copy; 2026 Stelachem.sk, Všetky práva vyhradené.</p>
+        </div>
+    </footer>
+</body>
+</html>
